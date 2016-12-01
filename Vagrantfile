@@ -51,6 +51,9 @@ Vagrant.configure("2") do |config|
     # Customize the amount of memory on the VM:
     vb.memory = "2048"
   end
+
+
+  config.vm.provision "shell", path: "scripts/setup-test-webserver.sh"
   #
   # View the documentation for the provider you are using for more
   # information on available options.
