@@ -7,6 +7,7 @@ echo "####################################################"
 yum install -y epel-release || exit 1
 # the following is required for autocomplete nmcli commands
 yum -y install bash-completion || exit 1
+yum -y install vim || exit 1
 
 #yum group install -y 'gnome desktop' || exit 1
 #yum install -y httpd || exit 1
