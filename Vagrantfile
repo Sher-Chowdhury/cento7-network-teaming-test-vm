@@ -4,7 +4,8 @@
 Vagrant.configure("2") do |config|
   config.vm.box = "bento/centos-7.4"
 
-  config.vm.provision "shell", path: "scripts/setup-network-teaming.sh"
+  config.vm.provision "shell", path: "scripts/install-rpms.sh", privileged: true
+  config.vm.provision "shell", path: "scripts/setup-network-teaming.sh", privileged: true
 
   config.vm.network "private_network", type: "dhcp"
   config.vm.network "private_network", type: "dhcp"
