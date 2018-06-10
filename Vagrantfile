@@ -2,10 +2,10 @@
 # vi: set ft=ruby :
 
 Vagrant.configure("2") do |config|
-  config.vm.box = "bento/centos-7.3"
+  config.vm.box = "bento/centos-7.5"
 
   config.vm.provision "shell", path: "scripts/install-rpms.sh", privileged: true
-  config.vm.provision "shell", path: "scripts/install-gnome-gui.sh", privileged: true
+  # config.vm.provision "shell", path: "scripts/install-gnome-gui.sh", privileged: true
   config.vm.provision "shell", path: "scripts/setup-network-teaming.sh", privileged: true
 
   config.vm.network "private_network", type: "dhcp"
