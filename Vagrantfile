@@ -2,7 +2,7 @@
 # vi: set ft=ruby :
 
 Vagrant.configure("2") do |config|
-  config.vm.box = "bento/centos-7.5"
+  config.vm.box = "bento/centos-7.3"  # note: this example doesn't work for centos 7.4 or 7.5
 
   config.vm.provision "shell", path: "scripts/install-rpms.sh", privileged: true
   # config.vm.provision "shell", path: "scripts/install-gnome-gui.sh", privileged: true
